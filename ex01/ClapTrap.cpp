@@ -6,7 +6,7 @@
 /*   By: abelayad <abelayad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:56:13 by abelayad          #+#    #+#             */
-/*   Updated: 2023/10/05 11:50:12 by abelayad         ###   ########.fr       */
+/*   Updated: 2023/10/05 12:34:55 by abelayad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,4 +97,12 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	dmg_amnt = m_energy >= amount ? amount : 0;
 	m_energy -= dmg_amnt;
 	std::cout << "ClapTrap " << m_name << " repairs " << dmg_amnt << " points of damage!" << std::endl;
+}
+
+void	ClapTrap::printStats(void)
+{
+	std::cout << "Name: " << m_name;
+	std::cout << "m_hp: " << m_hp;
+	std::cout << "m_energy: " << m_energy;
+	std::cout << "m_atkDmg: " << m_atkDmg << std::endl;
 }

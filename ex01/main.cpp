@@ -6,25 +6,14 @@
 /*   By: abelayad <abelayad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 10:59:22 by abelayad          #+#    #+#             */
-/*   Updated: 2023/10/05 11:55:07 by abelayad         ###   ########.fr       */
+/*   Updated: 2023/10/05 11:57:03 by abelayad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main()
 {
-	ClapTrap john("John Doe");
-	ClapTrap chuck("Chuck Norris");
-	ClapTrap foreign;
-	foreign = chuck;
-
-	john.attack("Chuck Norris");
-	chuck.takeDamage(0);
-	chuck.takeDamage(1);
-	chuck.attack("Me");
-	chuck.beRepaired(2);
-	chuck.takeDamage(10);
-	foreign.attack("John Doe");
-	return 0;
+	ScavTrap test("John");
+	test.printStats();
 }
