@@ -6,7 +6,7 @@
 /*   By: abelayad <abelayad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:56:13 by abelayad          #+#    #+#             */
-/*   Updated: 2023/10/05 12:34:55 by abelayad         ###   ########.fr       */
+/*   Updated: 2023/10/16 11:14:54 by abelayad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,16 @@ ClapTrap::ClapTrap(const std::string &name)
 	std::cout << "ClapTrap " << name << " Got Constructed!" << std::endl;
 }
 
+ClapTrap::ClapTrap(const std::string &name,
+	unsigned int hp, unsigned int energy, unsigned int atkDmg)
+	:	m_name(name),
+		m_hp(hp),
+		m_energy(energy),
+		m_atkDmg(atkDmg)
+{
+	std::cout << "ClapTrap " << name << " Got Constructed!" << std::endl;
+}
+
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << "ClapTrap " << m_name << " Got Destructed!" << std::endl;
@@ -48,11 +58,11 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap)
 {
 	if (&claptrap != this)
 	{
-		std::cout << "ClapTrap " << claptrap.m_name << " assign to " << this->m_name << std::endl;
 		this->m_name = claptrap.m_name;
 		this->m_hp = claptrap.m_hp;
 		this->m_atkDmg = claptrap.m_atkDmg;
 		this->m_energy = claptrap.m_energy;
+		std::cout << "ClapTrap " << claptrap.m_name << " assigned to " << this->m_name << std::endl;
 	}
 	return (*this);
 }
@@ -101,8 +111,8 @@ void	ClapTrap::beRepaired(unsigned int amount)
 
 void	ClapTrap::printStats(void)
 {
-	std::cout << "Name: " << m_name;
-	std::cout << "m_hp: " << m_hp;
-	std::cout << "m_energy: " << m_energy;
+	std::cout << "Name: " << m_name << " ";
+	std::cout << "m_hp: " << m_hp << " ";
+	std::cout << "m_energy: " << m_energy << " ";
 	std::cout << "m_atkDmg: " << m_atkDmg << std::endl;
 }

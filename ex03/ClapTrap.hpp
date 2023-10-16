@@ -16,7 +16,7 @@ public:
 	virtual void	attack(const std::string& target);
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
-	void			printStats(void);//to remove later
+	// void			printStats(void);//to remove later
 protected:
 	std::string		m_name;
 	unsigned int	m_hp;

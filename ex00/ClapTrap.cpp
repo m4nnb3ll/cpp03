@@ -6,7 +6,7 @@
 /*   By: abelayad <abelayad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:56:13 by abelayad          #+#    #+#             */
-/*   Updated: 2023/10/05 11:50:12 by abelayad         ###   ########.fr       */
+/*   Updated: 2023/10/16 10:27:50 by abelayad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,11 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap)
 {
 	if (&claptrap != this)
 	{
-		std::cout << "ClapTrap " << claptrap.m_name << " assign to " << this->m_name << std::endl;
 		this->m_name = claptrap.m_name;
 		this->m_hp = claptrap.m_hp;
 		this->m_atkDmg = claptrap.m_atkDmg;
 		this->m_energy = claptrap.m_energy;
+		std::cout << "ClapTrap " << claptrap.m_name << " assigned to " << this->m_name << std::endl;
 	}
 	return (*this);
 }
