@@ -17,28 +17,28 @@ DiamondTrap::~DiamondTrap(void)
 	std::cout << "DiamondTrap got destructed!" << std::endl;
 };
 
-DiamondTrap::DiamondTrap(const DiamondTrap &scavTrap)
-	:	ClapTrap(scavTrap.m_name, scavTrap.m_hp, scavTrap.m_energy, scavTrap.m_atkDmg)
+DiamondTrap::DiamondTrap(const DiamondTrap &diamondTrap)
+	:	ClapTrap(diamondTrap.m_name, diamondTrap.m_hp, diamondTrap.m_energy, diamondTrap.m_atkDmg)
 {
-	std::cout << "DiamondTrap copied " << scavTrap.m_name << " constructor called!" << std::endl;
+	std::cout << "DiamondTrap copied " << diamondTrap.m_name << " constructor called!" << std::endl;
 }
 
-DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& scavTrap)
+DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& diamondTrap)
 {
-	if (&scavTrap != this)
+	if (&diamondTrap != this)
 	{
-		this->m_name = scavTrap.m_name;
-		this->m_hp = scavTrap.m_hp;
-		this->m_atkDmg = scavTrap.m_atkDmg;
-		this->m_energy = scavTrap.m_energy;
-		std::cout << "DiamondTrap " << scavTrap.m_name << " assign to " << this->m_name << std::endl;
+		this->m_name = diamondTrap.m_name;
+		this->m_hp = diamondTrap.m_hp;
+		this->m_atkDmg = diamondTrap.m_atkDmg;
+		this->m_energy = diamondTrap.m_energy;
+		std::cout << "DiamondTrap " << diamondTrap.m_name << " assign to " << this->m_name << std::endl;
 	}
 	return (*this);
 }
 
 void	DiamondTrap::attack(const std::string& target)
 {
-	ScavTrap::attack(target);
+	diamondTrap::attack(target);
 }
 
 void	DiamondTrap::whoAmI()

@@ -10,8 +10,8 @@ public:
 	DiamondTrap(void);
 	DiamondTrap(const std::string &name); // constructor
 	~DiamondTrap(void); // destructor
-	DiamondTrap(const DiamondTrap &scavTrap); // copier
-	DiamondTrap	&operator=(const DiamondTrap& scavTrap); // assigner
+	DiamondTrap(const DiamondTrap &diamondTrap); // copier
+	DiamondTrap	&operator=(const DiamondTrap& diamondTrap); // assigner
 	void		attack(const std::string& target);
 	void		whoAmI();
 private:

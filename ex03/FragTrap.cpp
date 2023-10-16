@@ -17,21 +17,21 @@ FragTrap::~FragTrap(void)
 	std::cout << "FragTrap got destructed!" << std::endl;
 };
 
-FragTrap::FragTrap(const FragTrap &scavTrap)
-	:	ClapTrap(scavTrap.m_name, scavTrap.m_hp, scavTrap.m_energy, scavTrap.m_atkDmg)
+FragTrap::FragTrap(const FragTrap &fragTrap)
+	:	ClapTrap(fragTrap.m_name, fragTrap.m_hp, fragTrap.m_energy, fragTrap.m_atkDmg)
 {
-	std::cout << "FragTrap copied " << scavTrap.m_name << " constructor called!" << std::endl;
+	std::cout << "FragTrap copied " << fragTrap.m_name << " constructor called!" << std::endl;
 }
 
-FragTrap&	FragTrap::operator=(const FragTrap& scavTrap)
+FragTrap&	FragTrap::operator=(const FragTrap& fragTrap)
 {
-	if (&scavTrap != this)
+	if (&fragTrap != this)
 	{
-		this->m_name = scavTrap.m_name;
-		this->m_hp = scavTrap.m_hp;
-		this->m_atkDmg = scavTrap.m_atkDmg;
-		this->m_energy = scavTrap.m_energy;
-		std::cout << "FragTrap " << scavTrap.m_name << " assign to " << this->m_name << std::endl;
+		this->m_name = fragTrap.m_name;
+		this->m_hp = fragTrap.m_hp;
+		this->m_atkDmg = fragTrap.m_atkDmg;
+		this->m_energy = fragTrap.m_energy;
+		std::cout << "FragTrap " << fragTrap.m_name << " assign to " << this->m_name << std::endl;
 	}
 	return (*this);
 }
